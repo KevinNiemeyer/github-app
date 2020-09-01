@@ -1,0 +1,45 @@
+.tallies-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.scores {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  font-size: 18px;
+}
+
+.tally-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.winner {
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.blinking {
+  animation: blinkingText 0.8s infinite;
+}
+@keyframes blinkingText {
+  0% {
+    color: red;
+  }
+
+  50% {
+    color: transparent;
+  }
+
+  100% {
+    color: red;
+  }
+}
