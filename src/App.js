@@ -14,12 +14,12 @@ class App extends React.Component {
   handleChange = (e) => this.setState({ value: e.target.value });
 
   handleClick = async (profile) => {
-    /*  const url = `https://api.github.com/users/${this.state.value}`;
+    const url = `https://api.github.com/users/${this.state.value}`;
     const response = await axios(url);
     this.setState({
       [profile]: response.data,
       value: '',
-    }); */
+    });
   };
 
   render() {
