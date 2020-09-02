@@ -2,7 +2,7 @@ import React from 'react';
 import './Tally.css';
 
 const Tally = ({ profile1, profile2 }) => {
-  const getProfileScore = profile => {
+  const getProfileScore = (profile) => {
     //function that takes a profile and returns the sum of their scores
     const { following, followers, public_repos } = profile;
 
@@ -30,8 +30,10 @@ const Tally = ({ profile1, profile2 }) => {
       <div className='winner blinking'>
         {scoreProfile1 > scoreProfile2 ? (
           <div>{profile1.login} Wins!</div>
-        ) : (
+        ) : scoreProfile1 < scoreProfile2 ? (
           <div>{profile2.login} Wins!</div>
+        ) : (
+          <div>Tie!</div>
         )}
       </div>
     </div>
