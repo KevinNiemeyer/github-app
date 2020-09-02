@@ -25,6 +25,7 @@ class App extends React.Component {
   render() {
     return (
       <div className='app-container'>
+        <h1 style={{ margin: '25px 0 50px 0' }}>Github Profile App</h1>
         <div className='profiles-container'>
           <div className='app-profile'>
             <p>Enter First GitHub ID:</p>
@@ -35,16 +36,18 @@ class App extends React.Component {
               handleChange={this.handleChange}
             />
           </div>
-          <div className='vs-div'>VS</div>
-          <div className='app-profile'>
-            <p>Enter Second GitHub ID:</p>
-            <Profile
-              profileKey='profile2'
-              profile={this.state.profile2}
-              handleClick={this.handleClick}
-              handleChange={this.handleChange}
-            />
-          </div>
+          {this.state.profile1 && <div className='vs-div'>VS</div>}
+          {this.state.profile1 && (
+            <div className='app-profile'>
+              <p>Enter Second GitHub ID:</p>
+              <Profile
+                profileKey='profile2'
+                profile={this.state.profile2}
+                handleClick={this.handleClick}
+                handleChange={this.handleChange}
+              />
+            </div>
+          )}
         </div>
 
         {this.state.profile1 && this.state.profile2 && (
